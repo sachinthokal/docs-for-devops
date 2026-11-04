@@ -5,10 +5,10 @@ Welcome to the ultimate, beginner-to-advanced guide on **Git**. This guide is de
 ---
 
 ## 📑 Table of Contents
-1. [What is Git & Version Control?](#what-is-git--version-control)
+1. [What is Git & Version Control?](#what-is-git-version-control)
 2. [Why Git? Key Benefits](#why-git-key-benefits)
 3. [Centralized vs. Distributed Version Control](#centralized-vs-distributed-version-control)
-4. [Core Concepts & Terminology](#core-concepts--terminology)
+4. [Core Concepts & Terminology](#core-concepts-terminology)
 5. [The Basic Git Workflow](#the-basic-git-workflow)
 6. [Module Directory](#module-directory)
 

@@ -1,390 +1,756 @@
-/* =========================================
-   DEVOPSVaultX - GLOBAL LAYOUT
-   ========================================= */
+/* ==========================================================================
+   DevOpsVaultX Documentation — Design System
+   Color Scheme: Indigo Blue Header + Orangered Accents
+   ========================================================================== */
 
-/* Desktop */
+/* --------------------------------------------------------------------------
+   1. Theme Variables & Palette Overrides
+   -------------------------------------------------------------------------- */
+:root {
+  --md-text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --md-code-font: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  
+  /* DevOpsVaultX Signature Colors */
+  --dvx-primary: orangered;
+  --dvx-primary-hover: #e03d00;
+  --dvx-header-bg: #3f51b5;
+  --dvx-secondary: #7c3aed;
+  --dvx-cyan: #0891b2;
+  --dvx-card-radius: 12px;
+  --dvx-transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light Mode Overrides */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #3f51b5;
+  --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: orangered;
+  --dvx-surface: #ffffff;
+  --dvx-surface-subtle: #f9fafb;
+  --dvx-border: #e5e7eb;
+  --dvx-border-hover: orangered;
+  --dvx-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+  --dvx-shadow-hover: 0 12px 24px -4px rgba(255, 69, 0, 0.15), 0 4px 6px -4px rgba(255, 69, 0, 0.1);
+  --dvx-heading-h1: #111827;
+  --dvx-sidebar-active-bg: #fff3ef;
+  --dvx-btn-secondary-bg: #eeeeee;
+  --dvx-btn-secondary-fg: #222222;
+}
+
+/* Dark Mode Overrides (Slate Theme with Signature Colors) */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #3f51b5;
+  --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: orangered;
+  --dvx-surface: #0b0f19;
+  --dvx-surface-subtle: #111827;
+  --dvx-border: rgba(255, 255, 255, 0.1);
+  --dvx-border-hover: orangered;
+  --dvx-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --dvx-shadow-hover: 0 14px 28px -4px rgba(255, 69, 0, 0.25);
+  --dvx-heading-h1: #f9fafb;
+  --dvx-sidebar-active-bg: rgba(255, 69, 0, 0.18);
+  --dvx-btn-secondary-bg: #1f2937;
+  --dvx-btn-secondary-fg: #f9fafb;
+}
+
+/* --------------------------------------------------------------------------
+   2. Global Responsive Layout (Full Screen / Premium Width)
+   -------------------------------------------------------------------------- */
+.md-grid {
+  max-width: 95% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.md-header__inner {
+  max-width: 95% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media screen and (min-width: 120em) {
+  /* Ultra-wide Monitors (> 1920px) */
+  .md-grid,
+  .md-header__inner {
+    max-width: 1760px !important;
+  }
+}
+
 @media screen and (min-width: 76.25em) {
-    :root {
-        --md-breakpoint-desktop: 95%;
-    }
+  /* Desktop screens */
+  .md-main__inner {
+    max-width: 100% !important;
+  }
 
-    .md-grid {
-        max-width: 95% !important;
-    }
+  .md-content {
+    max-width: 100% !important;
+  }
 
-    .md-main__inner {
-        max-width: 100% !important;
-    }
+  .md-content__inner {
+    max-width: 100% !important;
+    padding-top: 1.25rem;
+  }
+
+  /* Left sidebar width */
+  .md-sidebar--primary {
+    width: 16.5rem !important;
+  }
+
+  /* Right TOC sidebar */
+  .md-sidebar--secondary {
+    width: 15rem !important;
+  }
+
+  /* Header Search Bar expansion on desktop */
+  .md-search {
+    max-width: 26rem;
+    flex-grow: 1;
+    margin-right: 1.5rem;
+  }
 }
 
-/* Ultra-wide screens */
-@media screen and (min-width: 100em) {
-    .md-grid {
-        max-width: 98% !important;
-    }
+@media screen and (max-width: 76.25em) {
+  /* Tablet & Laptop view */
+  .md-grid,
+  .md-header__inner {
+    max-width: 96% !important;
+  }
 }
 
-
-/* =========================================
-   HEADINGS
-   ========================================= */
-
-h1 {
-    color: black !important;
-    font-weight: bold !important;
-    text-transform: uppercase !important;
+/* --------------------------------------------------------------------------
+   3. Header Styling (Exact Match to User Reference Screenshot)
+   -------------------------------------------------------------------------- */
+.md-header {
+  background-color: #3f51b5 !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  border-bottom: none !important;
+  height: 3.2rem;
 }
 
-h2 {
-    color: #ff230a !important;
-    font-weight: bold !important;
+.md-header__inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
-h3 {
-    color: #9071ee !important;
-    font-weight: bold !important;
+.md-header__title {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  letter-spacing: -0.01em;
+  flex: 1 1 auto !important;
 }
 
-h4 {
-    color: orangered !important;
-    font-weight: bold !important;
+.md-header__title .md-ellipsis {
+  color: #ffffff !important;
+  font-weight: 700 !important;
 }
 
+.md-header__button {
+  color: #ffffff !important;
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  filter: brightness(0) invert(1);
+}
+
+/* Search Box on the Right (Dark translucent box matching reference) */
+.md-search {
+  max-width: 22rem;
+  margin-left: auto;
+}
+
+.md-search__inner {
+  background: rgba(0, 0, 0, 0.22) !important;
+  border-radius: 4px !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  transition: var(--dvx-transition);
+}
+
+.md-search__inner:focus-within {
+  background: rgba(0, 0, 0, 0.35) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.md-search__input {
+  color: #ffffff !important;
+}
+
+.md-search__input::placeholder {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+.md-search__icon {
+  color: #ffffff !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. Typography & Headings (Matching User Screenshot)
+   -------------------------------------------------------------------------- */
 .md-typeset h1 {
-    padding-bottom: 10px;
-    border-bottom: 3px solid orangered;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--dvx-heading-h1);
+  margin-bottom: 1.2rem;
+  padding-bottom: 8px;
+  border-bottom: 3px solid orangered !important;
+  position: relative;
+  text-transform: uppercase;
 }
 
-
-/* =========================================
-   TABLE OF CONTENTS
-   ========================================= */
-
-/* Main TOC headings */
-.md-sidebar--secondary
-> .md-nav
-> .md-nav__list
-> .md-nav__item
-> .md-nav__link {
-    font-weight: bolder !important;
-    color: #111111 !important;
+.md-typeset h1::after {
+  display: none !important;
 }
 
-/* TOC child items */
-.md-sidebar--secondary
-.md-nav__list
-.md-nav__list
-.md-nav__link {
-    font-weight: normal !important;
-    color: #555555 !important;
+.md-typeset h2 {
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  color: orangered !important;
+  margin-top: 2rem;
+  margin-bottom: 0.85rem;
 }
 
-/* Active TOC item */
-.md-sidebar--secondary .md-nav__link--active {
-    font-weight: bold !important;
+.md-typeset h3 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #7c3aed !important;
+  margin-top: 1.6rem;
 }
 
-
-/* =========================================
-   SIDEBAR
-   ========================================= */
-
-.md-nav__link {
-    font-family: "Roboto Mono", monospace;
+.md-typeset h4 {
+  font-weight: 700;
+  color: orangered !important;
 }
 
-/* Main sidebar items */
-.md-nav--primary
-> .md-nav__list
-> .md-nav__item
-> .md-nav__link {
-    border: none !important;
-    border-left: 4px solid transparent !important;
-    border-radius: 0 6px 6px 0;
-    padding: 9px 12px;
-    margin: 2px 0;
-    font-weight: 600;
-    transition: all 0.2s ease;
+.md-typeset a {
+  color: orangered;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
 }
 
-/* Hover */
-.md-nav--primary
-> .md-nav__list
-> .md-nav__item
-> .md-nav__link:hover {
-    background: #f3f4f6;
-    border-left-color: #9071ee !important;
-    padding-left: 16px;
+.md-typeset a:hover {
+  color: #e03d00;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-/* Active */
+/* --------------------------------------------------------------------------
+   5. Sidebar Navigation (Signature Orangered Active Item)
+   -------------------------------------------------------------------------- */
+.md-nav--primary .md-nav__item {
+  padding: 1px 0;
+}
+
+.md-nav--primary .md-nav__link {
+  border-radius: 6px;
+  padding: 7px 12px;
+  font-weight: 500;
+  font-size: 0.86rem;
+  transition: var(--dvx-transition);
+}
+
+.md-nav--primary .md-nav__link:hover {
+  background: var(--dvx-surface-subtle);
+  color: orangered;
+  border-left: 4px solid #7c3aed;
+  padding-left: 15px;
+}
+
 .md-nav--primary .md-nav__link--active {
-    background: #fff3ef !important;
-    color: orangered !important;
-    border-left: 4px solid orangered !important;
-    border-bottom: none !important;
-    font-weight: 900 !important;
-    padding-left: 16px;
+  background: var(--dvx-sidebar-active-bg) !important;
+  color: orangered !important;
+  font-weight: 800 !important;
+  border-left: 4px solid orangered !important;
+  border-radius: 0 6px 6px 0 !important;
+  padding-left: 14px;
 }
 
-/* Child menu */
-.md-nav--primary
-.md-nav__list
-.md-nav__list
-.md-nav__link {
-    border-bottom: none !important;
-    padding: 5px 10px 5px 20px;
-    font-size: 0.85rem;
-    color: #666;
+/* Secondary Table of Contents */
+.md-sidebar--secondary .md-nav__link {
+  font-size: 0.84rem;
+  transition: var(--dvx-transition);
 }
 
-/* Child hover */
-.md-nav--primary
-.md-nav__list
-.md-nav__list
-.md-nav__link:hover {
-    color: orangered;
-    background: #fafafa;
+.md-sidebar--secondary .md-nav__link:hover {
+  color: orangered;
 }
 
-
-/* =========================================
-   SIDEBAR SCROLLBAR
-   ========================================= */
-
-.md-sidebar__scrollwrap::-webkit-scrollbar {
-    width: 5px;
+.md-sidebar--secondary .md-nav__link--active {
+  color: orangered !important;
+  font-weight: 700;
 }
 
-.md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
-    background: #cccccc;
-    border-radius: 10px;
+/* --------------------------------------------------------------------------
+   6. Homepage & Landing Components
+   -------------------------------------------------------------------------- */
+.dvx-hero-wrapper {
+  position: relative;
+  text-align: center;
+  padding: 3.5rem 2rem 2.8rem;
+  margin-bottom: 2rem;
+  border-radius: var(--dvx-card-radius);
+  background: var(--dvx-surface);
+  border: 1px solid var(--dvx-border);
+  box-shadow: var(--dvx-shadow);
+  overflow: hidden;
 }
 
-
-/* =========================================
-   CONTENT
-   ========================================= */
-
-/* Better reading width */
-.md-content__inner {
-    max-width: 1100px;
-    margin: auto;
+.dvx-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
+.dvx-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(255, 69, 0, 0.08);
+  color: orangered;
+  border: 1px solid rgba(255, 69, 0, 0.25);
+  margin-bottom: 1.25rem;
+}
 
-/* =========================================
-   CODE BLOCKS
-   ========================================= */
+.dvx-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: orangered;
+  box-shadow: 0 0 8px orangered;
+  animation: dvx-pulse 2s infinite;
+}
 
+@keyframes dvx-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.dvx-hero-title {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 0 0 1rem;
+  color: var(--dvx-heading-h1) !important;
+  border-bottom: none !important;
+}
+
+.dvx-hero-subtitle {
+  font-size: 1.12rem;
+  line-height: 1.65;
+  color: var(--md-typeset-color);
+  opacity: 0.85;
+  margin-bottom: 2rem;
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dvx-cta-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Primary Button (Orangered - Exact Match to Reference) */
+.dvx-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 26px;
+  border-radius: 8px;
+  background: orangered !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 0.98rem;
+  text-decoration: none !important;
+  box-shadow: 0 4px 14px rgba(255, 69, 0, 0.25);
+  transition: var(--dvx-transition);
+  border: none;
+}
+
+.dvx-btn-primary:hover {
+  transform: translateY(-2px);
+  background: #e03d00 !important;
+  box-shadow: 0 6px 18px rgba(255, 69, 0, 0.35);
+  color: #ffffff !important;
+}
+
+/* Secondary Button (Soft Gray with Dark Text - Exact Match to Reference) */
+.dvx-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 26px;
+  border-radius: 8px;
+  background: var(--dvx-btn-secondary-bg) !important;
+  color: var(--dvx-btn-secondary-fg) !important;
+  font-weight: 700;
+  font-size: 0.98rem;
+  text-decoration: none !important;
+  border: 1px solid var(--dvx-border);
+  transition: var(--dvx-transition);
+}
+
+.dvx-btn-secondary:hover {
+  transform: translateY(-2px);
+  border-color: orangered;
+  color: orangered !important;
+}
+
+/* Callout Info Box (Orange Left Border) */
+.dvx-info-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 1.25rem 1.6rem;
+  border-radius: 8px;
+  background: var(--dvx-surface);
+  border: 1px solid var(--dvx-border);
+  border-left: 5px solid orangered;
+  box-shadow: var(--dvx-shadow);
+  margin: 1.8rem 0;
+}
+
+.dvx-info-icon {
+  font-size: 1.7rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.dvx-info-text {
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.dvx-info-text p {
+  margin: 0;
+}
+
+/* Knowledge Tracks Grid */
+.dvx-tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+  margin: 2.2rem 0;
+}
+
+.dvx-track-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.35rem 1.4rem;
+  border-radius: var(--dvx-card-radius);
+  background: var(--dvx-surface);
+  border: 1px solid var(--dvx-border);
+  text-decoration: none !important;
+  color: var(--md-typeset-color) !important;
+  box-shadow: var(--dvx-shadow);
+  transition: var(--dvx-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.dvx-track-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: orangered;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.dvx-track-card:hover {
+  transform: translateY(-4px);
+  border-color: orangered;
+  box-shadow: var(--dvx-shadow-hover);
+}
+
+.dvx-track-card:hover::before {
+  opacity: 1;
+}
+
+.dvx-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.dvx-card-icon {
+  font-size: 1.85rem;
+  line-height: 1;
+  transition: transform 0.25s ease;
+  display: inline-block;
+}
+
+.dvx-track-card:hover .dvx-card-icon {
+  transform: scale(1.15) rotate(4deg);
+}
+
+.dvx-card-arrow {
+  font-size: 1.15rem;
+  color: orangered;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: var(--dvx-transition);
+}
+
+.dvx-track-card:hover .dvx-card-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.dvx-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: var(--dvx-heading-h1);
+}
+
+.dvx-card-tags {
+  font-size: 0.82rem;
+  color: var(--md-typeset-color);
+  opacity: 0.7;
+  margin-top: auto;
+  line-height: 1.5;
+}
+
+/* Operational Principles */
+.dvx-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 2rem 0;
+}
+
+.dvx-principle-card {
+  padding: 1.4rem;
+  border-radius: var(--dvx-card-radius);
+  background: var(--dvx-surface);
+  border: 1px solid var(--dvx-border);
+  box-shadow: var(--dvx-shadow);
+  transition: var(--dvx-transition);
+}
+
+.dvx-principle-card:hover {
+  transform: translateY(-3px);
+  border-color: orangered;
+}
+
+.dvx-principle-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  margin-bottom: 0.6rem;
+  color: var(--dvx-heading-h1);
+}
+
+.dvx-principle-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--md-typeset-color);
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* Interview Spotlight Card */
+.dvx-interview-spotlight {
+  padding: 1.8rem;
+  border-radius: var(--dvx-card-radius);
+  background: var(--dvx-surface);
+  border: 1px solid var(--dvx-border);
+  border-left: 5px solid #7c3aed;
+  box-shadow: var(--dvx-shadow);
+  margin: 2.2rem 0;
+}
+
+.dvx-interview-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+}
+
+.dvx-interview-topics {
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.65;
+}
+
+.dvx-interview-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: orangered;
+  font-size: 1rem;
+  text-decoration: none !important;
+}
+
+.dvx-interview-link:hover {
+  text-decoration: underline !important;
+  color: #e03d00;
+}
+
+/* Footer Copyright */
+.dvx-footer-copyright {
+  text-align: center;
+  width: 100%;
+  font-size: 0.82rem;
+  letter-spacing: 0.3px;
+  padding: 0.6rem 0;
+  color: #94a3b8 !important;
+}
+
+.dvx-footer-copyright span {
+  color: #94a3b8 !important;
+}
+
+.dvx-footer-brand {
+  font-weight: 700;
+  color: #f8fafc !important;
+  margin: 0 4px;
+  text-decoration: none !important;
+}
+
+.dvx-footer-brand:hover {
+  color: orangered !important;
+  text-decoration: underline !important;
+}
+
+.dvx-footer-sep {
+  color: #475569 !important;
+  margin: 0 6px;
+}
+
+.dvx-footer-tagline {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.dvx-footer-heart {
+  color: #ef4444 !important;
+  margin-left: 3px;
+}
+
+/* Code blocks & Tables */
 .md-typeset pre {
-    border-radius: 8px;
-    border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  border: 1px solid var(--dvx-border);
 }
-
-.md-typeset code {
-    border-radius: 4px;
-}
-
-
-/* =========================================
-   TABLES
-   ========================================= */
 
 .md-typeset table:not([class]) {
-    border-radius: 8px;
-    overflow: hidden;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--dvx-border);
 }
 
 .md-typeset table:not([class]) th {
-    font-weight: 700;
+  background: var(--dvx-surface-subtle);
+  font-weight: 700;
 }
 
-
-/* =========================================
-   ADMONITIONS
-   ========================================= */
-
-.md-typeset .admonition,
-.md-typeset details {
-    border-radius: 8px;
+/* 404 Error Page */
+.dvx-error-container {
+  text-align: center;
+  padding: 5rem 1.5rem;
+  max-width: 740px;
+  margin: 0 auto;
 }
 
-
-/* =========================================
-   DEVOPSVaultX HOMEPAGE
-   ========================================= */
-
-.dvx-hero {
-    text-align: center;
-    padding: 35px 20px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #eeeeee;
+.dvx-error-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  padding: 0.4rem 1.1rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(239, 68, 68, 0.25);
 }
 
-.dvx-hero strong {
-    color: orangered;
+.dvx-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ef4444;
 }
 
-.dvx-buttons {
-    margin-top: 25px;
+.dvx-error-code {
+  font-size: clamp(5rem, 12vw, 8rem);
+  font-weight: 900;
+  line-height: 1;
+  margin: 0;
+  color: orangered;
 }
 
-.dvx-buttons a {
-    display: inline-block;
-    padding: 10px 18px;
-    margin: 5px;
-    border-radius: 6px;
-    background: orangered;
-    color: white !important;
-    text-decoration: none !important;
-    font-weight: bold;
-    transition: 0.2s ease;
+.dvx-error-title {
+  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  margin-top: 0.5rem;
 }
 
-.dvx-buttons a:hover {
-    transform: translateY(-2px);
-    opacity: 0.9;
+.dvx-error-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.dvx-buttons a:last-child {
-    background: #eeeeee;
-    color: #333 !important;
+/* --------------------------------------------------------------------------
+   7. Full Screen Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1100px) {
+  .dvx-principles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-
-/* =========================================
-   INFO BOX
-   ========================================= */
-
-.dvx-info {
-    padding: 18px 20px;
-    border-left: 4px solid orangered;
-    background: #fafafa;
-    border-radius: 5px;
+@media screen and (max-width: 960px) {
+  .dvx-principles-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-
-/* =========================================
-   KNOWLEDGE CARDS
-   ========================================= */
-
-.dvx-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 14px;
-    margin: 25px 0;
-}
-
-.dvx-card {
-    display: flex;
-    flex-direction: column;
-    padding: 18px;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    text-decoration: none !important;
-    color: inherit !important;
-    transition: 0.2s ease;
-}
-
-.dvx-card:hover {
-    transform: translateY(-3px);
-    border-color: orangered;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-}
-
-.dvx-card span {
-    font-size: 1.6rem;
-    margin-bottom: 8px;
-}
-
-.dvx-card strong {
-    font-size: 1rem;
-}
-
-.dvx-card small {
-    margin-top: 5px;
-    color: #777;
-}
-
-
-/* =========================================
-   OPERATIONAL PRINCIPLES
-   ========================================= */
-
-.dvx-principles {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 15px;
-}
-
-.dvx-principles > div {
-    padding: 18px;
-    border: 1px solid #eeeeee;
-    border-radius: 8px;
-}
-
-.dvx-principles p {
-    font-size: 0.85rem;
-    color: #666;
-}
-
-
-/* =========================================
-   INTERVIEW SECTION
-   ========================================= */
-
-.dvx-interview {
-    margin-top: 20px;
-    padding: 22px;
-    border-left: 4px solid #9071ee;
-    background: #fafafa;
-    border-radius: 5px;
-}
-
-.dvx-interview a {
-    color: orangered;
-    font-weight: bold;
-}
-
-
-/* =========================================
-   RESPONSIVE DESIGN
-   ========================================= */
-
-/* Tablet */
-@media screen and (max-width: 1000px) {
-
-    .dvx-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .dvx-principles {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-/* Mobile */
 @media screen and (max-width: 768px) {
+  .dvx-hero-wrapper {
+    padding: 2.8rem 1.25rem 2rem;
+  }
+  
+  .dvx-tracks-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .dvx-grid {
-        grid-template-columns: 1fr;
-    }
+  .dvx-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
-    .dvx-principles {
-        grid-template-columns: 1fr;
-    }
-
-    .dvx-hero {
-        padding: 25px 10px;
-    }
-
-    .dvx-buttons a {
-        display: block;
-        margin: 8px 0;
-    }
-
-    .md-content__inner {
-        max-width: 100%;
-    }
+  .dvx-btn-primary,
+  .dvx-btn-secondary {
+    justify-content: center;
+  }
 }

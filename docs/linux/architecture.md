@@ -6,7 +6,7 @@ Linux architecture is the structural layout of a Linux operating system. It defi
 
 ## Architecture
 
-![alt text](linux_converted.webp)
+![Linux Operating System Architecture Layers: Hardware, Kernel, Shell, and User Applications](linux_converted.webp)
 
 ## Components
 
@@ -24,4 +24,4 @@ The Linux system is divided into four major layers:
 4. **Applications (User Space)**:
    The programs or software that you run on Linux. Examples include web browsers, text editors, and media players.
 
-![alt text](sys_diagram_converted.webp)
+![Linux System Diagram: Kernel Subsystems, System Calls, and User Space](sys_diagram_converted.webp)

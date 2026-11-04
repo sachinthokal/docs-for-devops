@@ -2,7 +2,7 @@
 
 This repository contains the Kubernetes Deployment configuration featuring **Startup**, **Readiness**, and **Liveness** probes for the Node.js application (`sachinthokal/k8s_probes_app:v1`).
 
-![alt text](Probes.png)
+![Kubernetes Pod Health Probes Diagram: Startup, Readiness, and Liveness Probes](probes.webp)
 ---
 
 ## 🛠 Deployment Manifest (`deployment.yaml`)

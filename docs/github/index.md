@@ -8,7 +8,7 @@ Welcome to the ultimate, beginner-to-advanced guide on **GitHub**. This guide is
 1. [What is GitHub?](#what-is-github)
 2. [Git vs. GitHub: What's the Difference?](#git-vs-github-whats-the-difference)
 3. [Key Features of GitHub](#key-features-of-github)
-4. [Core Concepts & Terminology](#core-concepts--terminology)
+4. [Core Concepts & Terminology](#core-concepts-terminology)
 5. [The Standard GitHub Workflow](#the-standard-github-workflow)
 6. [Module Directory](#module-directory)
 

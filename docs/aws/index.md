@@ -8,7 +8,7 @@ Welcome to the ultimate guide on **Amazon Web Services (AWS)**. This guide cover
 1. [What is Amazon Web Services (AWS)?](#what-is-amazon-web-services-aws)
 2. [The AWS Shared Responsibility Model](#the-aws-shared-responsibility-model)
 3. [Key Advantages of AWS](#key-advantages-of-aws)
-4. [Core Concepts & Terminology](#core-concepts--terminology)
+4. [Core Concepts & Terminology](#core-concepts-terminology)
 5. [Module Directory](#module-directory)
 
 ---

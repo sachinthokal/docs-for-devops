@@ -8,7 +8,7 @@ Welcome to the ultimate guide on **Microsoft Azure**. This guide covers core clo
 1. [What is Microsoft Azure?](#what-is-microsoft-azure)
 2. [Cloud Service Models (IaaS, PaaS, SaaS)](#cloud-service-models-iaas-paas-saas)
 3. [Key Benefits of Azure](#key-benefits-of-azure)
-4. [Core Concepts & Terminology](#core-concepts--terminology)
+4. [Core Concepts & Terminology](#core-concepts-terminology)
 5. [Module Directory](#module-directory)
 
 ---

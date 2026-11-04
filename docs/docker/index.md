@@ -5,7 +5,7 @@ Welcome to the ultimate, beginner-to-advanced guide on **Docker**. This guide ta
 ---
 
 ## 📑 Table of Contents
-1. [What is Docker & Containerization?](#what-is-docker--containerization)
+1. [What is Docker & Containerization?](#what-is-docker-containerization)
 2. [Virtual Machines vs. Containers](#virtual-machines-vs-containers)
 3. [Key Benefits of Docker](#key-benefits-of-docker)
 4. [Core Terminology](#core-terminology)

@@ -6,7 +6,7 @@ Welcome to the ultimate guide on **GitHub Actions**. This guide covers native CI
 
 ## 📑 Table of Contents
 1. [What is GitHub Actions?](#what-is-github-actions)
-2. [Key Concepts & Terminology](#key-concepts--terminology)
+2. [Key Concepts & Terminology](#key-concepts-terminology)
 3. [Benefits of GitHub Actions](#benefits-of-github-actions)
 4. [Standard Workflow File Structure](#standard-workflow-file-structure)
 5. [Module Directory](#module-directory)

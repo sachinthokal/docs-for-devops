@@ -1,0 +1,9 @@
+<a href="{{ config.repo_url }}" title="View on GitHub" class="md-source" target="_blank" rel="noopener noreferrer">
+  <div class="md-source__icon md-icon">
+    {% set icon = config.theme.icon.repo or "fontawesome/brands/github" %}
+    {% include ".icons/" ~ icon ~ ".svg" %}
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>

@@ -5,15 +5,15 @@ A comprehensive, categorized guide to Git commands from basic snapshotting to ad
 ---
 
 ## 🎯 Quick Navigation
-- [1. Setup & Initialization](#1-setup--initialization)
-- [2. Basic Snapshotting & Staging](#2-basic-snapshotting--staging)
-- [3. Branching & Merging](#3-branching--merging)
-- [4. Inspecting & History Log](#4-inspecting--history-log)
-- [5. Undoing Changes & Reverting](#5-undoing-changes--reverting)
+- [1. Setup & Initialization](#1-setup-initialization)
+- [2. Basic Snapshotting & Staging](#2-basic-snapshotting-staging)
+- [3. Branching & Merging](#3-branching-merging)
+- [4. Inspecting & History Log](#4-inspecting-history-log)
+- [5. Undoing Changes & Reverting](#5-undoing-changes-reverting)
 - [6. Remote Repositories](#6-remote-repositories)
 - [7. Stashing (Temporary Storage)](#7-stashing-temporary-storage)
-- [8. Advanced: Rebase, Cherry-Pick & Bisect](#8-advanced-rebase-cherry-pick--bisect)
-- [9. Housekeeping & Internal Inspection](#9-housekeeping--internal-inspection)
+- [8. Advanced: Rebase, Cherry-Pick & Bisect](#8-advanced-rebase-cherry-pick-bisect)
+- [9. Housekeeping & Internal Inspection](#9-housekeeping-internal-inspection)
 
 ---
 

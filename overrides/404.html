@@ -1,47 +1,37 @@
 {% extends "main.html" %}
 
-<!-- Page Title Override in Browser Tab -->
 {% block htmltitle %}
-<title>404 - Pipeline Broken | DevOpsVaultX Docs</title>
+<title>404 - Page Not Found | DevOpsVaultX Docs</title>
 {% endblock %}
 
-<!-- Main Content Area Override -->
 {% block content %}
-<div class="md-content" style="text-align: center; padding: 5rem 1.5rem; max-width: 800px; margin: 0 auto;">
-  
-  <!-- Animated Status Badge Vibe -->
-  <div style="display: inline-block; background: rgba(239, 68, 68, 0.1); color: #ef4444; padding: 0.5rem 1.2rem; font-weight: 700; font-size: 0.85rem; border-radius: 50px; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1.5rem; border: 1px solid rgba(239, 68, 68, 0.2);">
-    🔴 Build Status: Failed
+<div class="dvx-error-container">
+  <div class="dvx-error-badge" role="status">
+    <span class="dvx-status-dot" aria-hidden="true"></span> Build Status: Route Not Found
   </div>
 
-  <!-- Giant Tech Error Header -->
-  <h1 style="font-size: 7rem; font-weight: 900; line-height: 1; margin: 0; background: linear-gradient(135deg, #3f51b5, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-    404
-  </h1>
+  <h1 class="dvx-error-code">404</h1>
   
-  <!-- DevOps Context Message -->
-  <h2 style="font-size: 2.2rem; font-weight: 800; margin-top: 0.5rem; color: var(--md-typeset-color, #2c3e50);">
-    Pipeline Broken! Route Not Found
-  </h2>
+  <h2 class="dvx-error-title">Pipeline Broken! Route Not Found</h2>
+  
+  <p class="dvx-error-desc">
+    The documentation page or operational guide you are looking for has been moved, renamed, or is currently undeployed.
+  </p>
 
-  <!-- Interactive Control Buttons -->
-  <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-    <a href="{{ config.site_url }}" class="md-button md-button--primary" style="padding: 0.6rem 2rem; font-weight: bold; border-radius: 4px; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 6px rgba(63, 81, 181, 0.15);">
-      🏠 Go Back Home
+  <div class="dvx-error-actions">
+    <a href="{{ config.site_url }}" class="md-button md-button--primary">
+      🏠 Return to Documentation Home
     </a>
-    <a href="{{ config.site_url }}#search" onclick="setTimeout(() => document.querySelector('.md-search__input').focus(), 100)" class="md-button" style="padding: 0.6rem 2rem; font-weight: bold; border-radius: 4px; text-decoration: none; border: 1px solid var(--md-typeset-color, #cbd5e1); color: var(--md-typeset-color, #2c3e50);">
-      🔍 Search Wiki
+    <a href="https://www.devopsvaultx.com/" target="_blank" rel="noopener noreferrer" class="md-button">
+      🌐 Visit Main Website
     </a>
   </div>
 
-  <!-- Terminal Vibe Footnote -->
-  <div style="margin-top: 5rem; font-family: monospace; font-size: 0.85rem; color: #94a3b8;">
-    [ERROR_CODE: ERR_ROUTE_DRIFT_404] ➔ Managed automatically by DevOpsVaultX Engine.
+  <div class="dvx-error-terminal">
+    <code>[STATUS: ERR_ROUTE_DRIFT_404] &bull; DevOpsVaultX Engine &bull; Code. Deploy. Automate. Repeat.</code>
   </div>
-
 </div>
 {% endblock %}
 
-<!-- Hide sidebars on 404 page for a clean spotlight focus -->
 {% block left_sidebar %}{% endblock %}
 {% block right_sidebar %}{% endblock %}

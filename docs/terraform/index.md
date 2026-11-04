@@ -5,10 +5,10 @@ Welcome to the ultimate guide on **Terraform**. This guide covers Infrastructure
 ---
 
 ## 📑 Table of Contents
-1. [What is Terraform & IaC?](#what-is-terraform--iac)
+1. [What is Terraform & IaC?](#what-is-terraform-iac)
 2. [Imperative vs. Declarative IaC](#imperative-vs-declarative-iac)
 3. [Key Benefits of Terraform](#key-benefits-of-terraform)
-4. [Core Concepts & Terminology](#core-concepts--terminology)
+4. [Core Concepts & Terminology](#core-concepts-terminology)
 5. [The Standard Terraform Workflow](#the-standard-terraform-workflow)
 6. [Module Directory](#module-directory)
 

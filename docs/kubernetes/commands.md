@@ -6,16 +6,16 @@ A comprehensive, production-ready reference guide for Kubernetes CLI (`kubectl`)
 
 ## 📌 Table of Contents
 
-1. [Cluster Info & Health](#1-cluster-info--health)
+1. [Cluster Info & Health](#1-cluster-info-health)
 2. [Pod Management](#2-pod-management)
-3. [Deployments & Workloads](#3-deployments--workloads)
-4. [Services & Networking](#4-services--networking)
-5. [ConfigMaps & Secrets](#5-configmaps--secrets)
+3. [Deployments & Workloads](#3-deployments-workloads)
+4. [Services & Networking](#4-services-networking)
+5. [ConfigMaps & Secrets](#5-configmaps-secrets)
 6. [Namespaces](#6-namespaces)
-7. [Nodes & Resource Monitoring](#7-nodes--resource-monitoring)
-8. [Debugging & Troubleshooting](#8-debugging--troubleshooting)
-9. [RBAC & Security](#9-rbac--security)
-10. [Imperative Shortcuts & Useful One-Liners](#10-imperative-shortcuts--useful-one-liners)
+7. [Nodes & Resource Monitoring](#7-nodes-resource-monitoring)
+8. [Debugging & Troubleshooting](#8-debugging-troubleshooting)
+9. [RBAC & Security](#9-rbac-security)
+10. [Imperative Shortcuts & Useful One-Liners](#10-imperative-shortcuts-useful-one-liners)
 
 ---
 

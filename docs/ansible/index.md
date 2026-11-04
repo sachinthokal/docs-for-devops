@@ -8,7 +8,7 @@ Welcome to the ultimate guide on **Ansible**. This guide covers agentless config
 1. [What is Ansible?](#what-is-ansible)
 2. [Key Advantages of Ansible](#key-advantages-of-ansible)
 3. [Agentless vs. Agent-Based Architecture](#agentless-vs-agent-based-architecture)
-4. [Core Concepts & Terminology](#core-concepts--terminology)
+4. [Core Concepts & Terminology](#core-concepts-terminology)
 5. [The Basic Ansible Workflow](#the-basic-ansible-workflow)
 6. [Module Directory](#module-directory)
 
@@ -52,6 +52,15 @@ Agentless Architecture (Ansible)
 - **Task**: An action statement calling a single Ansible module with specific parameters.
 - **Playbook**: A YAML file containing one or more plays that map tasks to specific inventory host groups.
 - **Role**: A structured directory layout containing tasks, handlers, variables, and templates for reusable automation.
+
+---
+
+## The Basic Ansible Workflow
+
+1. **Define Inventory**: List target hosts in `/etc/ansible/hosts` or a custom inventory file.
+2. **Write Playbook**: Create declarative YAML playbooks defining the desired system state.
+3. **Execute**: Run `ansible-playbook -i inventory playbook.yml` from the control node.
+4. **Reconcile**: Ansible connects over SSH, verifies current node state, and applies changes idempotently.
 
 ---
 

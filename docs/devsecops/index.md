@@ -47,6 +47,15 @@ DEVSECOPS (Shift-Left Security embedded continuously)
 
 ---
 
+---
+
+## Key Benefits of DevSecOps
+
+- **Proactive Vulnerability Discovery**: Identifies security vulnerabilities early in development when they are least costly and fastest to fix.
+- **Automated Compliance**: Enforces regulatory and security policies automatically in continuous integration pipelines.
+- **Accelerated Time to Market**: Reduces release delays caused by last-minute manual security audits.
+- **Shared Responsibility Culture**: Unifies developers, operations, and security teams with transparent security metrics.
+
 ## Module Directory
 
 - 🏛️ **[DevSecOps Architecture](architecture.md)** — Security gates in CI/CD, Threat modeling, SBOM generation, and Policy as Code.

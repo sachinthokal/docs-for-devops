@@ -1,31 +1,88 @@
 site_name: DevOpsVaultX Docs
 site_url: https://docs.devopsvaultx.com/
+site_description: Production-grade DevOps engineering wiki, architecture diagrams, command cheat sheets, and interview prep covering Linux, Docker, Kubernetes, CI/CD, AWS, Azure, Terraform, Ansible, and DevSecOps.
+site_author: DevOpsVaultX
+repo_name: DevOpsVaultX/docs-for-devops
+repo_url: https://github.com/sachinthokal/docs-for-devops
+edit_uri: edit/main/docs/
 
 theme:
   name: material
   custom_dir: overrides
+  logo: assets/logo.svg
+  favicon: assets/favicon.png
 
   features:
     - navigation.indexes
     - navigation.top
+    - navigation.instant
+    - navigation.tracking
     - search.suggest
     - search.highlight
+    - search.share
     - toc.follow
     - content.code.copy
+    - content.code.annotate
 
   palette:
-    scheme: default
-    primary: indigo
-    accent: indigo
+    # Scheme 1: Light Mode (Matches user reference)
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Scheme 2: Dark Mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+  font: false
 
 plugins:
   - search
 
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
 extra_css:
   - stylesheets/extra.css
 
+extra:
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.devopsvaultx.com/
+      name: DevOpsVaultX Main Site
+    - icon: fontawesome/brands/github
+      link: https://github.com/sachinthokal/docs-for-devops
+      name: GitHub Repository
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@devopsvaultx
+      name: YouTube Channel
+
 copyright: |
-  &copy; 2026 <strong>DevOpsVaultX</strong> | <span style="color: #10b981;">Code. Deploy. Automate. Repeat.</span> ❤️
+  &copy; 2026 DevOpsVaultX. Code. Deploy. Automate. Repeat. ❤️
 
 nav:
   - Home: index.md
@@ -78,8 +135,15 @@ nav:
     - Installations:
         - Kind Installation: kubernetes/kind.md
         - Minikube Installation: kubernetes/minikube.md
+    - Workloads: kubernetes/workloads.md
+    - Storage & Volumes: kubernetes/storage.md
+    - ConfigMaps & Secrets: kubernetes/config-secrets.md
+    - Services & Ingress: kubernetes/services-ingress.md
+    - CNI & Service Mesh: kubernetes/cni-mesh.md
+    - Autoscaling: kubernetes/autoscaling.md
     - Commands: kubernetes/commands.md
     - RBAC: kubernetes/rbac.md
+    - Pod & Security: kubernetes/pod-security.md
     - K8S Probes: kubernetes/probes.md
 
   - Terraform:

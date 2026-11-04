@@ -7,7 +7,7 @@ Welcome to the ultimate guide on **Helm**. This guide covers Kubernetes package 
 ## 📑 Table of Contents
 1. [What is Helm?](#what-is-helm)
 2. [Why Use Helm?](#why-use-helm)
-3. [Core Concepts & Terminology](#core-concepts--terminology)
+3. [Core Concepts & Terminology](#core-concepts-terminology)
 4. [Structure of a Helm Chart](#structure-of-a-helm-chart)
 5. [Module Directory](#module-directory)
 

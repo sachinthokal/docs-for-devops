@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {% set page_title = page.title if (page and page.title and not page.is_homepage) else config.site_name %}
+  {% set page_desc = (page.meta.description if (page and page.meta and page.meta.description) else config.site_description) %}
+  {% set page_url = page.canonical_url if (page and page.canonical_url) else config.site_url %}
+  {% set page_is_home = page.is_homepage if (page and page.is_homepage) else false %}
+
+  <!-- SEO & Open Graph Tags -->
+  <meta name="author" content="{{ config.site_author }}" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta property="og:site_name" content="{{ config.site_name }}" />
+  <meta property="og:title" content="{{ page_title }} | DevOpsVaultX" />
+  <meta property="og:description" content="{{ page_desc }}" />
+  <meta property="og:type" content="{% if page_is_home %}website{% else %}article{% endif %}" />
+  <meta property="og:url" content="{{ page_url }}" />
+  <meta property="og:image" content="{{ config.site_url }}assets/og-image.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:alt" content="DevOpsVaultX Documentation Hub" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@devopsvaultx" />
+  <meta name="twitter:creator" content="@devopsvaultx" />
+  <meta name="twitter:title" content="{{ page_title }} | DevOpsVaultX" />
+  <meta name="twitter:description" content="{{ page_desc }}" />
+  <meta name="twitter:image" content="{{ config.site_url }}assets/og-image.webp" />
+  <meta name="twitter:image:alt" content="DevOpsVaultX Documentation Hub" />
+
+  <!-- JSON-LD Structured Data Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.devopsvaultx.com/#organization",
+        "name": "DevOpsVaultX",
+        "url": "https://www.devopsvaultx.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://docs.devopsvaultx.com/assets/favicon.png"
+        },
+        "sameAs": [
+          "https://www.devopsvaultx.com/",
+          "https://docs.devopsvaultx.com/",
+          "https://www.youtube.com/@devopsvaultx"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "{{ config.site_url }}#website",
+        "url": "{{ config.site_url }}",
+        "name": "{{ config.site_name }}",
+        "description": "{{ config.site_description }}",
+        "publisher": {
+          "@id": "https://www.devopsvaultx.com/#organization"
+        }
+      },
+      {
+        "@type": "{% if page_is_home %}WebPage{% else %}TechArticle{% endif %}",
+        "@id": "{{ page_url }}#content",
+        "isPartOf": {
+          "@id": "{{ config.site_url }}#website"
+        },
+        "headline": "{{ page_title }}",
+        "url": "{{ page_url }}",
+        "description": "{{ page_desc }}",
+        "inLanguage": "en",
+        "publisher": {
+          "@id": "https://www.devopsvaultx.com/#organization"
+        }
+      }
+    ]
+  }
+  </script>
+{% endblock %}

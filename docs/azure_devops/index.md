@@ -7,7 +7,7 @@ Welcome to the ultimate guide on **Azure DevOps (ADO)**. This guide covers Azure
 ## 📑 Table of Contents
 1. [What is Azure DevOps?](#what-is-azure-devops)
 2. [Core Services of Azure DevOps](#core-services-of-azure-devops)
-3. [Key Concepts & Terminology](#key-concepts--terminology)
+3. [Key Concepts & Terminology](#key-concepts-terminology)
 4. [Classic Editor vs YAML Pipelines](#classic-editor-vs-yaml-pipelines)
 5. [Module Directory](#module-directory)
 
@@ -42,6 +42,17 @@ Welcome to the ultimate guide on **Azure DevOps (ADO)**. This guide covers Azure
 - **Job**: A series of steps run by an agent node.
 - **Agent Pool**: A cluster of build/deployment agents (Microsoft-hosted or Self-hosted).
 - **Service Connection**: Secure credential configuration enabling Pipelines to connect to external clouds (Azure, AWS, Kubernetes).
+
+---
+
+## Classic Editor vs YAML Pipelines
+
+| Feature | Classic Editor | YAML Pipelines (Recommended) |
+| :--- | :--- | :--- |
+| **Configuration** | GUI-driven point-and-click | Version-controlled `azure-pipelines.yml` code |
+| **Version Control** | Separate from source code | Tracked and reviewed in Git Pull Requests |
+| **Reusability** | Task groups | Reusable templates and composite steps |
+| **Disaster Recovery** | Manual recreation or export | Instantly restored from repository history |
 
 ---
 

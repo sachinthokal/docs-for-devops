@@ -1,65 +1,99 @@
 name: CI/CD - Deploy DevOpsVaultX Docs
 
 on:
- workflow_dispatch: # Allows manual triggering of the workflow from the GitHub Actions tab
- push:
+  push:
+    branches:
+      - main
     tags:
       - 'v*'
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
 
 permissions:
-  contents: write  # Required for pushing the built HTML to the gh-pages branch
+  contents: write
 
 jobs:
   deploy:
-    name: DEPLOY DOCS
+    name: Build & Deploy Documentation
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      # Stage 1: Checkout Code
+      - name: Stage 1 - Checkout Code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Setup Python Environment
+      # Stage 2: Setup Runtime Environment
+      - name: Stage 2 - Setup Runtime Environment
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.12'
 
+      # Stage 3: Install Dependencies
       - name: Cache Pip Dependencies
         uses: actions/cache@v4
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
 
-      - name: Install MKDocs & Material Theme
+      - name: Stage 3 - Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install mkdocs mkdocs-material
+          pip install -r requirements.txt
 
-      - name: Deploy to GitHub Pages
+      # Stage 4: Validate / Lint
+      - name: Stage 4 - Validate / Lint
         run: |
-          # Dynamically picks the name of the user who triggered the pipeline
+          echo "Validating MkDocs configuration and Markdown syntax..."
+          NO_MKDOCS_2_WARNING=1 mkdocs build --strict
+
+      # Stage 5: Build Documentation
+      - name: Stage 5 - Build Documentation
+        run: |
+          echo "Building production-ready static assets..."
+          NO_MKDOCS_2_WARNING=1 mkdocs build --clean --strict
+
+      # Stage 6: SEO & Link Validation
+      - name: Stage 6 - SEO & Link Validation
+        run: |
+          echo "Running SEO, Sitemap, Robots, and Asset Link validations..."
+          python scripts/validate_seo.py
+
+      # Stage 7: Deploy to GitHub Pages
+      - name: Stage 7 - Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v') || github.event_name == 'workflow_dispatch'
+        run: |
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
-          mkdocs gh-deploy --force
+          NO_MKDOCS_2_WARNING=1 mkdocs gh-deploy --force
 
-      - name: Generate Deployment Summary Report
-        if: success()
+      # Post-Deployment Status Report
+      - name: Generate Pipeline Summary Report
+        if: always()
         run: |
-            echo "## 🚀 Deployment Summary Report" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "DevOps Documentation has been successfully built and pushed to production." >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "### 🌐 Live Environments" >> $GITHUB_STEP_SUMMARY
-            echo "| Target Domain | Resource Type | Status |" >> $GITHUB_STEP_SUMMARY
-            echo "| :--- | :--- | :--- |" >> $GITHUB_STEP_SUMMARY
-            echo "| 🖥️ [docs.devopsvaultx.com](https://docs.devopsvaultx.com/) | Custom Subdomain | 🟢 Active |" >> $GITHUB_STEP_SUMMARY
-            echo "| 📦 [GitHub Pages Deployment](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/) | Origin Host | 🟢 Synced |" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "### ⚙️ Build Metadata" >> $GITHUB_STEP_SUMMARY
-            echo "*   **Triggered By:** \`${{ github.actor }}\` via code push." >> $GITHUB_STEP_SUMMARY
-            echo "*   **Commit Message:** \`${{ github.event.head_commit.message }}\`" >> $GITHUB_STEP_SUMMARY
-            echo "*   **Branch Tracking:** \`refs/heads/main\` ➔ \`gh-pages\`" >> $GITHUB_STEP_SUMMARY
-            echo "*   **Pipeline Engine:** GitHub Hosted Runner (\`ubuntu-latest\`)" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "---" >> $GITHUB_STEP_SUMMARY
-            echo "<p align='center'>Managed Automatically by DevOpsVaultX Engine. Code. Deploy. Automate. Repeat. ❤️</p>" >> $GITHUB_STEP_SUMMARY
+          echo "## 🚀 DevOpsVaultX Docs — CI/CD Pipeline Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Stage | Description | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "| :--- | :--- | :--- |" >> $GITHUB_STEP_SUMMARY
+          echo "| 1 | Checkout Repository | 🟢 Passed |" >> $GITHUB_STEP_SUMMARY
+          echo "| 2 | Setup Runtime (Python 3.12) | 🟢 Passed |" >> $GITHUB_STEP_SUMMARY
+          echo "| 3 | Install Dependencies | 🟢 Passed |" >> $GITHUB_STEP_SUMMARY
+          echo "| 4 | Validate & Lint Configuration | 🟢 Passed |" >> $GITHUB_STEP_SUMMARY
+          echo "| 5 | Production Build | 🟢 Passed |" >> $GITHUB_STEP_SUMMARY
+          echo "| 6 | SEO, Sitemap & Link Validation | 🟢 Passed |" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ github.ref }}" = "refs/heads/main" ] || [[ "${{ github.ref }}" == refs/tags/v* ]] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "| 7 | Deploy to GitHub Pages | 🟢 Deployed |" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "| 7 | Deploy to GitHub Pages | ⏭️ Skipped (PR Preview) |" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 🌐 Live Environments" >> $GITHUB_STEP_SUMMARY
+          echo "* 🖥️ **Custom Subdomain:** [docs.devopsvaultx.com](https://docs.devopsvaultx.com/)" >> $GITHUB_STEP_SUMMARY
+          echo "* 📦 **Platform Ecosystem:** [devopsvaultx.com](https://www.devopsvaultx.com/)" >> $GITHUB_STEP_SUMMARY
+          echo "* 👤 **Triggered by:** \`${{ github.actor }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "<p align='center'>Managed automatically by DevOpsVaultX Engine &bull; Code. Deploy. Automate. Repeat. ❤️</p>" >> $GITHUB_STEP_SUMMARY

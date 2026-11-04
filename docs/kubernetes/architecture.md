@@ -11,7 +11,7 @@ Kubernetes operates on a **Master-Worker (Control Plane - Node)** model:
 * **Control Plane (Master Node):** The decision-maker. Manages cluster state, scheduling, and overall orchestrations.
 * **Worker Nodes:** The execution unit. Hosts application containers inside Pods and handles networking.
 
-![alt text](licensed-image.webp)
+![Kubernetes Cluster Control Plane and Worker Node Architecture Diagram](licensed-image.webp)
 ---
 
 ## 🧠 Control Plane (Master Node)

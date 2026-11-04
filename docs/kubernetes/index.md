@@ -13,8 +13,8 @@ Welcome to the Kubernetes documentation hub for this project. Use the navigation
 
 ### 2. Setup & Installation
 
-* [**Kind Cluster Setup**](installations/kind.md) – Step-by-step guide to setting up a local multi-node cluster using Kind.
-* [**Minikube Cluster Setup**](installations/minikube.md) – Local cluster setup, addons, and management with Minikube.
+* [**Kind Cluster Setup**](kind.md) – Step-by-step guide to setting up a local multi-node cluster using Kind.
+* [**Minikube Cluster Setup**](minikube.md) – Local cluster setup, addons, and management with Minikube.
 
 ### 3. Storage & Configuration
 
@@ -38,19 +38,18 @@ Welcome to the Kubernetes documentation hub for this project. Use the navigation
 
 ### 7. Package Management & GitOps
 
-* [**Helm Package Manager**](helm/helm.md) – Building and deploying applications using Helm Charts and values files.
-* [**GitOps Workflows**](gitops/argocd.md) – Declarative continuous delivery with ArgoCD and FluxCD.
+* [**Helm Package Manager**](../helm/index.md) – Building and deploying applications using Helm Charts and values files.
+* [**GitOps Workflows**](../gitops/index.md) – Declarative continuous delivery with ArgoCD and FluxCD.
 
 ### 8. Observability & Logging
 
-* [**Monitoring & Metrics**](observability/monitoring.md) – Scraping cluster metrics using Prometheus, Grafana, and Kube-State-Metrics.
-* [**Logging & Tracing**](observability/logging.md) – Aggregating pod logs using EFK (Elasticsearch/Fluentbit/Kibana) and Grafana Loki.
+* [**Monitoring & Metrics**](../observability/index.md) – Scraping cluster metrics using Prometheus, Grafana, and Kube-State-Metrics.
+* [**Logging & Tracing**](../observability/commands.md) – Aggregating pod logs using EFK and Grafana Loki.
 
 ### 9. Cluster Operations & Disaster Recovery
 
-* [**Backup & Upgrades**](operations/backup-upgrades.md) – `etcd` snapshot backups, Velero cluster recovery, and version upgrades.
-* [**Command Cheat Sheet**](operations/commands.md) – Essential `kubectl` operational commands, context switching, and quick reference.
-* [**Troubleshooting Guide**](operations/troubleshooting.md) – Resolving CrashLoopBackOff, ImagePullBackOff, Pending pods, and log inspection.
+* [**Command Cheat Sheet**](commands.md) – Essential `kubectl` operational commands, context switching, and quick reference.
+* [**Troubleshooting Guide**](commands.md#8-debugging-troubleshooting) – Resolving CrashLoopBackOff, ImagePullBackOff, Pending pods, and log inspection.
 
 ---
 

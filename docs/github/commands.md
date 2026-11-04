@@ -5,12 +5,12 @@ A complete guide to using the official GitHub CLI (`gh`), Git remote integration
 ---
 
 ## 🎯 Quick Navigation
-- [1. GitHub CLI Authentication & Config](#1-github-cli-authentication--config)
+- [1. GitHub CLI Authentication & Config](#1-github-cli-authentication-config)
 - [2. Managing Repositories](#2-managing-repositories)
-- [3. Managing Pull Requests](#3-managing-pull-requests)
+- [3. Managing Pull Requests](#3-managing-pull-requests-prs)
 - [4. Managing Issues](#4-managing-issues)
 - [5. GitHub Actions Workflow Execution](#5-github-actions-workflow-execution)
-- [6. Managing Gists, Releases & API](#6-managing-gists-releases--api)
+- [6. Managing Gists, Releases & API](#6-managing-gists-releases-api)
 
 ---
 

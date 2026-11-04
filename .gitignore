@@ -1,2 +1,10 @@
 venv/
+.venv/
 .vscode/
+site/
+__pycache__/
+*.pyc
+.DS_Store
+chrome-headless-shell/
+node_modules/
+lighthouse-report*.json

@@ -1,0 +1,7 @@
+{% if config.theme.logo %}
+  <img src="{{ config.theme.logo | url }}" alt="DevOpsVaultX Logo" width="36" height="36">
+{% else %}
+  {% set icon = config.theme.icon.logo or "material/library" %}
+  {% include ".icons/" ~ icon ~ ".svg" %}
+{% endif %}
+
