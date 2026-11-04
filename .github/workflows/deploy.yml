@@ -1,4 +1,4 @@
-name: CI/CD - Deploy DevOpsVaultX Docs
+name: CI/CD - DevOpsVaultX Docs
 
 on:
   push:
