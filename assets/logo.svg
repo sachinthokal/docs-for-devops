@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" fill="none">
+  <defs>
+    <linearGradient id="dvx-grad-primary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <linearGradient id="dvx-grad-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2dd4bf" />
+      <stop offset="100%" stop-color="#a78bfa" />
+    </linearGradient>
+    <filter id="dvx-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#10b981" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Cyber Hexagon / Shield -->
+  <polygon points="60,8 106,34 106,86 60,112 14,86 14,34" 
+           fill="#0b0f19" 
+           stroke="url(#dvx-grad-primary)" 
+           stroke-width="4.5" 
+           stroke-linejoin="round"
+           filter="url(#dvx-shadow)" />
+
+  <!-- Inner Hexagon Accent Track -->
+  <polygon points="60,18 97,40 97,80 60,102 23,80 23,40" 
+           fill="none" 
+           stroke="rgba(99, 102, 241, 0.25)" 
+           stroke-width="1.5" 
+           stroke-dasharray="4 3" 
+           stroke-linejoin="round" />
+
+  <!-- Left Code Bracket < -->
+  <path d="M43 45 L32 60 L43 75" 
+        stroke="url(#dvx-grad-glow)" 
+        stroke-width="4.5" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" />
+
+  <!-- Right Code Bracket > -->
+  <path d="M77 45 L88 60 L77 75" 
+        stroke="url(#dvx-grad-glow)" 
+        stroke-width="4.5" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" />
+
+  <!-- Central Dynamic DevOps 'X' & Infinity Loop Core -->
+  <path d="M50 48 L70 72 M70 48 L50 72" 
+        stroke="url(#dvx-grad-primary)" 
+        stroke-width="5" 
+        stroke-linecap="round" />
+
+  <!-- Pulse Center Core Dot -->
+  <circle cx="60" cy="60" r="3" fill="#10b981" />
+</svg>

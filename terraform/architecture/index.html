@@ -6,6 +6,10 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Production-grade DevOps engineering wiki, architecture diagrams, command cheat sheets, and interview prep covering Linux, Docker, Kubernetes, CI/CD, AWS, Azure, Terraform, Ansible, and DevSecOps.">
+      
+      
+        <meta name="author" content="DevOpsVaultX">
       
       
         <link rel="canonical" href="https://docs.devopsvaultx.com/terraform/architecture/">
@@ -20,8 +24,8 @@
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -29,10 +33,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -42,12 +46,6 @@
       
     
     
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -59,15 +57,92 @@
 
     
     
+  
+  
+  
+  
+
+  <!-- SEO & Open Graph Tags -->
+  <meta name="author" content="DevOpsVaultX" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta property="og:site_name" content="DevOpsVaultX Docs" />
+  <meta property="og:title" content="Architecture | DevOpsVaultX" />
+  <meta property="og:description" content="Production-grade DevOps engineering wiki, architecture diagrams, command cheat sheets, and interview prep covering Linux, Docker, Kubernetes, CI/CD, AWS, Azure, Terraform, Ansible, and DevSecOps." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://docs.devopsvaultx.com/terraform/architecture/" />
+  <meta property="og:image" content="https://docs.devopsvaultx.com/assets/og-image.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:alt" content="DevOpsVaultX Documentation Hub" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@devopsvaultx" />
+  <meta name="twitter:creator" content="@devopsvaultx" />
+  <meta name="twitter:title" content="Architecture | DevOpsVaultX" />
+  <meta name="twitter:description" content="Production-grade DevOps engineering wiki, architecture diagrams, command cheat sheets, and interview prep covering Linux, Docker, Kubernetes, CI/CD, AWS, Azure, Terraform, Ansible, and DevSecOps." />
+  <meta name="twitter:image" content="https://docs.devopsvaultx.com/assets/og-image.webp" />
+  <meta name="twitter:image:alt" content="DevOpsVaultX Documentation Hub" />
+
+  <!-- JSON-LD Structured Data Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.devopsvaultx.com/#organization",
+        "name": "DevOpsVaultX",
+        "url": "https://www.devopsvaultx.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://docs.devopsvaultx.com/assets/favicon.png"
+        },
+        "sameAs": [
+          "https://www.devopsvaultx.com/",
+          "https://docs.devopsvaultx.com/",
+          "https://www.youtube.com/@devopsvaultx"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://docs.devopsvaultx.com/#website",
+        "url": "https://docs.devopsvaultx.com/",
+        "name": "DevOpsVaultX Docs",
+        "description": "Production-grade DevOps engineering wiki, architecture diagrams, command cheat sheets, and interview prep covering Linux, Docker, Kubernetes, CI/CD, AWS, Azure, Terraform, Ansible, and DevSecOps.",
+        "publisher": {
+          "@id": "https://www.devopsvaultx.com/#organization"
+        }
+      },
+      {
+        "@type": "TechArticle",
+        "@id": "https://docs.devopsvaultx.com/terraform/architecture/#content",
+        "isPartOf": {
+          "@id": "https://docs.devopsvaultx.com/#website"
+        },
+        "headline": "Architecture",
+        "url": "https://docs.devopsvaultx.com/terraform/architecture/",
+        "description": "Production-grade DevOps engineering wiki, architecture diagrams, command cheat sheets, and interview prep covering Linux, Docker, Kubernetes, CI/CD, AWS, Azure, Terraform, Ansible, and DevSecOps.",
+        "inLanguage": "en",
+        "publisher": {
+          "@id": "https://www.devopsvaultx.com/#organization"
+        }
+      }
+    ]
+  }
+  </script>
+
   </head>
   
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -86,16 +161,12 @@
     </div>
     
     
-      
-
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="DevOpsVaultX Docs" class="md-header__button md-logo" aria-label="DevOpsVaultX Docs" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../assets/logo.svg" alt="DevOpsVaultX Logo" width="36" height="36">
+
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -109,20 +180,10 @@
             DevOpsVaultX Docs
           </span>
         </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
-            
-              Architecture
-            
-          </span>
-        </div>
       </div>
     </div>
-    
-      
-    
-    
-    
+
+    <!-- Search Box on the Right -->
     
       
       
@@ -130,7 +191,7 @@
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         </label>
-        <div class="md-search" data-md-component="search" role="dialog">
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -142,6 +203,11 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
@@ -164,12 +230,12 @@
     </div>
   </div>
 </div>
+
       
     
-    
   </nav>
-  
 </header>
+
     
     <div class="md-container" data-md-component="container">
       
@@ -194,12 +260,24 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="DevOpsVaultX Docs" class="md-nav__button md-logo" aria-label="DevOpsVaultX Docs" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../assets/logo.svg" alt="DevOpsVaultX Logo" width="36" height="36">
+
 
     </a>
     DevOpsVaultX Docs
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sachinthokal/docs-for-devops" title="View on GitHub" class="md-source" target="_blank" rel="noopener noreferrer">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -1366,6 +1444,20 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1567,6 +1659,174 @@
   
   
     <li class="md-nav__item">
+      <a href="../../kubernetes/workloads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workloads
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes/storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storage & Volumes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes/config-secrets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ConfigMaps & Secrets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes/services-ingress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Services & Ingress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes/cni-mesh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CNI & Service Mesh
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes/autoscaling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autoscaling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../kubernetes/commands/" class="md-nav__link">
         
   
@@ -1603,6 +1863,34 @@
     
   
     RBAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes/pod-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pod & Security
   
 
     
@@ -3659,57 +3947,60 @@
                   
 
 
+  
+  
 
-<h1 id="terraform-architecture-internal-mechanics">Terraform Architecture &amp; Internal Mechanics 🏛️</h1>
+
+<h1 id="terraform-architecture-internal-mechanics">Terraform Architecture &amp; Internal Mechanics 🏛️<a class="headerlink" href="#terraform-architecture-internal-mechanics" title="Permanent link">&para;</a></h1>
 <p>Understanding Terraform's internal engine, core split, provider plugins, state file management, and dependency graphs.</p>
 <hr />
-<h2 id="1-high-level-architecture">1. High-Level Architecture</h2>
+<h2 id="1-high-level-architecture">1. High-Level Architecture<a class="headerlink" href="#1-high-level-architecture" title="Permanent link">&para;</a></h2>
 <p>Terraform architecture consists of two main parts: <strong>Terraform Core</strong> and <strong>Terraform Providers</strong>.</p>
-<pre><code>+-----------------------------------------------------------------------------------+
-|                                 TERRAFORM CORE                                    |
-|                                                                                   |
-|  - Reads Configuration (.tf files) &amp; State File (.tfstate)                        |
-|  - Builds Directed Acyclic Graph (DAG) for Resource Dependencies                  |
-|  - Calculates Execution Plan (Diff: Desired State vs Current State)               |
-+-----------------------------------+-----------------------------------------------+
-                                    |
-                                    | gRPC RPC Calls
-                                    v
-+-----------------------------------------------------------------------------------+
-|                               PROVIDER PLUGINS                                    |
-|                                                                                   |
-|  +--------------------+    +--------------------+    +-------------------------+  |
-|  |    AWS Provider    |    |   Azure Provider   |    |   Kubernetes Provider   |  |
-|  +---------+----------+    +---------+----------+    +------------+------------+  |
-+------------|-------------------------|----------------------------|---------------+
-             | API Requests            | API Requests               | API Requests
-             v                         v                            v
-+-----------------------------------------------------------------------------------+
-|                           REAL-WORLD CLOUD INFRASTRUCTURE                         |
-|        (AWS EC2, VPCs, Azure VMs, Kubernetes Clusters, GCP BigQuery)              |
-+-----------------------------------------------------------------------------------+
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>+-----------------------------------------------------------------------------------+
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>|                                 TERRAFORM CORE                                    |
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>|                                                                                   |
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>|  - Reads Configuration (.tf files) &amp; State File (.tfstate)                        |
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>|  - Builds Directed Acyclic Graph (DAG) for Resource Dependencies                  |
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>|  - Calculates Execution Plan (Diff: Desired State vs Current State)               |
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>+-----------------------------------+-----------------------------------------------+
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>                                    |
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>                                    | gRPC RPC Calls
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>                                    v
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>+-----------------------------------------------------------------------------------+
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>|                               PROVIDER PLUGINS                                    |
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>|                                                                                   |
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>|  +--------------------+    +--------------------+    +-------------------------+  |
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>|  |    AWS Provider    |    |   Azure Provider   |    |   Kubernetes Provider   |  |
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>|  +---------+----------+    +---------+----------+    +------------+------------+  |
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>+------------|-------------------------|----------------------------|---------------+
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>             | API Requests            | API Requests               | API Requests
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>             v                         v                            v
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>+-----------------------------------------------------------------------------------+
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>|                           REAL-WORLD CLOUD INFRASTRUCTURE                         |
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>|        (AWS EC2, VPCs, Azure VMs, Kubernetes Clusters, GCP BigQuery)              |
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>+-----------------------------------------------------------------------------------+
+</span></code></pre></div>
 <hr />
-<h2 id="2-core-architectural-components">2. Core Architectural Components</h2>
-<h3 id="a-terraform-core">A. Terraform Core</h3>
+<h2 id="2-core-architectural-components">2. Core Architectural Components<a class="headerlink" href="#2-core-architectural-components" title="Permanent link">&para;</a></h2>
+<h3 id="a-terraform-core">A. Terraform Core<a class="headerlink" href="#a-terraform-core" title="Permanent link">&para;</a></h3>
 <p>A statically compiled binary written in Go that manages:
 - Parsing <code>.tf</code> configuration files.
 - State file comparison and drift calculation.
 - Constructing the <strong>Resource Dependency Graph (DAG)</strong> to determine parallel execution steps.</p>
-<h3 id="b-provider-plugins">B. Provider Plugins</h3>
+<h3 id="b-provider-plugins">B. Provider Plugins<a class="headerlink" href="#b-provider-plugins" title="Permanent link">&para;</a></h3>
 <p>Standalone executables that communicate with Terraform Core over RPC (gRPC). Providers translate Terraform requests into vendor-specific Cloud REST API calls (e.g., converting a <code>aws_instance</code> resource block into AWS EC2 <code>RunInstances</code> API call).</p>
 <hr />
-<h2 id="3-state-management-remote-backends">3. State Management &amp; Remote Backends</h2>
+<h2 id="3-state-management-remote-backends">3. State Management &amp; Remote Backends<a class="headerlink" href="#3-state-management-remote-backends" title="Permanent link">&para;</a></h2>
 <p>The State file (<code>terraform.tfstate</code>) tracks metadata, mapped IDs, and dependency relationships.</p>
-<h3 id="local-state-vs-remote-backend-architecture">Local State vs. Remote Backend Architecture</h3>
-<pre><code>LOCAL STATE (Risk of concurrency conflicts)
-[ Developer 1 ] ---&gt; ( Local .tfstate ) &lt;--- [ Developer 2 ] (Race Conditions)
-
-REMOTE BACKEND (Production Architecture)
-[ Developer 1 ] ---\                                    /--&gt; S3 Bucket (Encrypted .tfstate)
-                    +---&gt; [ Terraform Lock Engine ] ---+
-[ Developer 2 ] ---/                                    \--&gt; DynamoDB Table (State Lock)
-</code></pre>
+<h3 id="local-state-vs-remote-backend-architecture">Local State vs. Remote Backend Architecture<a class="headerlink" href="#local-state-vs-remote-backend-architecture" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>LOCAL STATE (Risk of concurrency conflicts)
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>[ Developer 1 ] ---&gt; ( Local .tfstate ) &lt;--- [ Developer 2 ] (Race Conditions)
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>REMOTE BACKEND (Production Architecture)
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>[ Developer 1 ] ---\                                    /--&gt; S3 Bucket (Encrypted .tfstate)
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>                    +---&gt; [ Terraform Lock Engine ] ---+
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>[ Developer 2 ] ---/                                    \--&gt; DynamoDB Table (State Lock)
+</span></code></pre></div>
 <ul>
 <li><strong>Remote Backends (AWS S3, Azure Blob, Terraform Cloud)</strong>: Store state centrally to enable team collaboration.</li>
 <li><strong>State Locking (DynamoDB / Storage Lease)</strong>: Prevents concurrent <code>terraform apply</code> operations from corrupting state files.</li>
@@ -3746,27 +4037,43 @@ REMOTE BACKEND (Production Architecture)
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright" style="text-align: center; width: 100%; font-family: sans-serif; font-size: 0.65rem; letter-spacing: 0.5px;">
-  <!-- Muted Silver/Gray for copyright -->
-  <span style="color: #94a3b8;">&copy; 2026</span> 
+      <div class="dvx-footer-copyright">
+  <span>&copy; 2026</span>
+  <a href="https://www.devopsvaultx.com/" target="_blank" rel="noopener noreferrer" class="dvx-footer-brand">
+    DevOpsVaultX
+  </a>
+  <span class="dvx-footer-sep">|</span>
+  <span class="dvx-footer-tagline">Code. Deploy. Automate. Repeat.</span>
+  <span class="dvx-footer-heart" aria-hidden="true">❤️</span>
+</div>
+      
+        
+<div class="md-social">
   
-  <!-- Crisp White for Brand Name -->
-  <strong style="color: #ffffff; margin-left: 4px;">DevOpsVaultX</strong> 
+    
+    
+    
+    
+    <a href="https://www.devopsvaultx.com/" target="_blank" rel="noopener" title="DevOpsVaultX Main Site" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
   
-  <!-- Muted Divider -->
-  <span style="color: #475569; margin: 0 8px;">|</span> 
+    
+    
+    
+    
+    <a href="https://github.com/sachinthokal/docs-for-devops" target="_blank" rel="noopener" title="GitHub Repository" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
   
-  <!-- 🌈 Premium Smooth Gradient for Tagline -->
-  <span style="
-    background: linear-gradient(90deg, #2dd4bf 0%, #a78bfa 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 600;
-    display: inline-block;
-  ">Code. Deploy. Automate. Repeat.</span>
+    
+    
+    
+    
+    <a href="https://www.youtube.com/@devopsvaultx" target="_blank" rel="noopener" title="YouTube Channel" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.2-23.7-24.8-42.3-48.3-48.6C458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5c-23.5 6.3-42 24.9-48.3 48.6C15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.3 448 288.1 448 288.1 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6V175.2l142.7 81.2z"/></svg>
+    </a>
   
-  <!-- Pulsing Red Heart -->
-  <span style="color: #f43f5e; margin-left: 2px;">❤️</span>
 </div>
       
     </div>
@@ -3782,10 +4089,10 @@ REMOTE BACKEND (Production Architecture)
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.top", "navigation.instant", "navigation.tracking", "search.suggest", "search.highlight", "search.share", "toc.follow", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
     
   </body>

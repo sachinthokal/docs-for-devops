@@ -6,6 +6,10 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Production-grade DevOps engineering wiki, architecture diagrams, command cheat sheets, and interview prep covering Linux, Docker, Kubernetes, CI/CD, AWS, Azure, Terraform, Ansible, and DevSecOps.">
+      
+      
+        <meta name="author" content="DevOpsVaultX">
       
       
         <link rel="canonical" href="https://docs.devopsvaultx.com/git/architecture/">
@@ -20,8 +24,8 @@
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -29,10 +33,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -42,12 +46,6 @@
       
     
     
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -59,15 +57,92 @@
 
     
     
+  
+  
+  
+  
+
+  <!-- SEO & Open Graph Tags -->
+  <meta name="author" content="DevOpsVaultX" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta property="og:site_name" content="DevOpsVaultX Docs" />
+  <meta property="og:title" content="Architecture | DevOpsVaultX" />
+  <meta property="og:description" content="Production-grade DevOps engineering wiki, architecture diagrams, command cheat sheets, and interview prep covering Linux, Docker, Kubernetes, CI/CD, AWS, Azure, Terraform, Ansible, and DevSecOps." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://docs.devopsvaultx.com/git/architecture/" />
+  <meta property="og:image" content="https://docs.devopsvaultx.com/assets/og-image.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:alt" content="DevOpsVaultX Documentation Hub" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@devopsvaultx" />
+  <meta name="twitter:creator" content="@devopsvaultx" />
+  <meta name="twitter:title" content="Architecture | DevOpsVaultX" />
+  <meta name="twitter:description" content="Production-grade DevOps engineering wiki, architecture diagrams, command cheat sheets, and interview prep covering Linux, Docker, Kubernetes, CI/CD, AWS, Azure, Terraform, Ansible, and DevSecOps." />
+  <meta name="twitter:image" content="https://docs.devopsvaultx.com/assets/og-image.webp" />
+  <meta name="twitter:image:alt" content="DevOpsVaultX Documentation Hub" />
+
+  <!-- JSON-LD Structured Data Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.devopsvaultx.com/#organization",
+        "name": "DevOpsVaultX",
+        "url": "https://www.devopsvaultx.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://docs.devopsvaultx.com/assets/favicon.png"
+        },
+        "sameAs": [
+          "https://www.devopsvaultx.com/",
+          "https://docs.devopsvaultx.com/",
+          "https://www.youtube.com/@devopsvaultx"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://docs.devopsvaultx.com/#website",
+        "url": "https://docs.devopsvaultx.com/",
+        "name": "DevOpsVaultX Docs",
+        "description": "Production-grade DevOps engineering wiki, architecture diagrams, command cheat sheets, and interview prep covering Linux, Docker, Kubernetes, CI/CD, AWS, Azure, Terraform, Ansible, and DevSecOps.",
+        "publisher": {
+          "@id": "https://www.devopsvaultx.com/#organization"
+        }
+      },
+      {
+        "@type": "TechArticle",
+        "@id": "https://docs.devopsvaultx.com/git/architecture/#content",
+        "isPartOf": {
+          "@id": "https://docs.devopsvaultx.com/#website"
+        },
+        "headline": "Architecture",
+        "url": "https://docs.devopsvaultx.com/git/architecture/",
+        "description": "Production-grade DevOps engineering wiki, architecture diagrams, command cheat sheets, and interview prep covering Linux, Docker, Kubernetes, CI/CD, AWS, Azure, Terraform, Ansible, and DevSecOps.",
+        "inLanguage": "en",
+        "publisher": {
+          "@id": "https://www.devopsvaultx.com/#organization"
+        }
+      }
+    ]
+  }
+  </script>
+
   </head>
   
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -86,16 +161,12 @@
     </div>
     
     
-      
-
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="DevOpsVaultX Docs" class="md-header__button md-logo" aria-label="DevOpsVaultX Docs" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../assets/logo.svg" alt="DevOpsVaultX Logo" width="36" height="36">
+
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -109,20 +180,10 @@
             DevOpsVaultX Docs
           </span>
         </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
-            
-              Architecture
-            
-          </span>
-        </div>
       </div>
     </div>
-    
-      
-    
-    
-    
+
+    <!-- Search Box on the Right -->
     
       
       
@@ -130,7 +191,7 @@
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         </label>
-        <div class="md-search" data-md-component="search" role="dialog">
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -142,6 +203,11 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
@@ -164,12 +230,12 @@
     </div>
   </div>
 </div>
+
       
     
-    
   </nav>
-  
 </header>
+
     
     <div class="md-container" data-md-component="container">
       
@@ -194,12 +260,24 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="DevOpsVaultX Docs" class="md-nav__button md-logo" aria-label="DevOpsVaultX Docs" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../assets/logo.svg" alt="DevOpsVaultX Logo" width="36" height="36">
+
 
     </a>
     DevOpsVaultX Docs
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sachinthokal/docs-for-devops" title="View on GitHub" class="md-source" target="_blank" rel="noopener noreferrer">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -1554,6 +1632,20 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1755,6 +1847,174 @@
   
   
     <li class="md-nav__item">
+      <a href="../../kubernetes/workloads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workloads
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes/storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storage & Volumes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes/config-secrets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ConfigMaps & Secrets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes/services-ingress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Services & Ingress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes/cni-mesh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CNI & Service Mesh
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes/autoscaling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autoscaling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../kubernetes/commands/" class="md-nav__link">
         
   
@@ -1791,6 +2051,34 @@
     
   
     RBAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes/pod-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pod & Security
   
 
     
@@ -3781,33 +4069,36 @@
                   
 
 
+  
+  
 
-<h1 id="git-architecture-internal-working">Git Architecture &amp; Internal Working 🏛️</h1>
+
+<h1 id="git-architecture-internal-working">Git Architecture &amp; Internal Working 🏛️<a class="headerlink" href="#git-architecture-internal-working" title="Permanent link">&para;</a></h1>
 <p>To truly master Git, you must understand how it works under the hood. Git is not just a file-tracking system; it is essentially a <strong>content-addressable filesystem</strong> built on key object types.</p>
 <hr />
-<h2 id="1-the-three-states-four-areas">1. The Three States &amp; Four Areas</h2>
+<h2 id="1-the-three-states-four-areas">1. The Three States &amp; Four Areas<a class="headerlink" href="#1-the-three-states-four-areas" title="Permanent link">&para;</a></h2>
 <p>Git organizes files into <strong>four distinct logical areas</strong>:</p>
-<pre><code>+-----------------------------------------------------------------------------------+
-|                                LOCAL MACHINE                                      |
-|                                                                                   |
-|  +-------------------+      +-------------------+      +----------------------+  |
-|  | Working Directory | ---&gt; |   Staging Area    | ---&gt; |   Local Repository   |  |
-|  |  (Untracked/Mod)  |      |   (Index/Cache)   |      |   (.git directory)   |  |
-|  +-------------------+      +-------------------+      +----------------------+  |
-|            |                          |                          |                |
-+------------|--------------------------|--------------------------|----------------+
-             |                          |                          |
-             |  `git add`               |  `git commit`            |  `git push`
-             +-------------------------&gt;+                          |
-                                        +-------------------------&gt;+
-                                                                   |
-                                                                   v
-                                                         +-------------------+
-                                                         | Remote Repository |
-                                                         |  (GitHub/GitLab)  |
-                                                         +-------------------+
-</code></pre>
-<h3 id="explanation-of-areas">Explanation of Areas:</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>+-----------------------------------------------------------------------------------+
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>|                                LOCAL MACHINE                                      |
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>|                                                                                   |
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>|  +-------------------+      +-------------------+      +----------------------+  |
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>|  | Working Directory | ---&gt; |   Staging Area    | ---&gt; |   Local Repository   |  |
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>|  |  (Untracked/Mod)  |      |   (Index/Cache)   |      |   (.git directory)   |  |
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>|  +-------------------+      +-------------------+      +----------------------+  |
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>|            |                          |                          |                |
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>+------------|--------------------------|--------------------------|----------------+
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>             |                          |                          |
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>             |  `git add`               |  `git commit`            |  `git push`
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>             +-------------------------&gt;+                          |
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>                                        +-------------------------&gt;+
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>                                                                   |
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>                                                                   v
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>                                                         +-------------------+
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>                                                         | Remote Repository |
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>                                                         |  (GitHub/GitLab)  |
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>                                                         +-------------------+
+</span></code></pre></div>
+<h3 id="explanation-of-areas">Explanation of Areas:<a class="headerlink" href="#explanation-of-areas" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Working Directory</strong>: Actual physical files on your disk. You edit, delete, or create files here.</li>
 <li><strong>Staging Area (Index)</strong>: A simple binary file (<code>.git/index</code>) containing a list of files that will go into the next commit.</li>
@@ -3815,53 +4106,53 @@
 <li><strong>Remote Repository</strong>: External server hosting the repository for team collaboration.</li>
 </ol>
 <hr />
-<h2 id="2-git-object-architecture-the-core-data-model">2. Git Object Architecture (The Core Data Model)</h2>
+<h2 id="2-git-object-architecture-the-core-data-model">2. Git Object Architecture (The Core Data Model)<a class="headerlink" href="#2-git-object-architecture-the-core-data-model" title="Permanent link">&para;</a></h2>
 <p>Git uses <strong>4 main immutable object types</strong> stored inside <code>.git/objects/</code>. Every object is compressed using <code>zlib</code> and indexed by a <strong>40-character SHA-1 hash</strong> (or SHA-256) calculated from its contents and header.</p>
-<pre><code>+------------------------------------------------------------------------+
-|                              COMMIT OBJECT                             |
-|  Hash: a1b2c3d...                                                      |
-|  Tree: 8f9e10... (Points to Root Tree)                                 |
-|  Parent: 4a5b6c... (Previous Commit)                                   |
-|  Author: Jane Doe &lt;jane@example.com&gt;                                   |
-|  Message: Initial Commit                                               |
-+-----------------------------------+-+----------------------------------+
-                                    |
-                                    v
-                       +-------------------------+
-                       |       ROOT TREE         |
-                       | Hash: 8f9e10...         |
-                       +------------+------------+
-                                    |
-           +------------------------+------------------------+
-           |                                                 |
-           v                                                 v
-+---------------------+                           +---------------------+
-|     BLOB OBJECT     |                           |    SUB-TREE OBJECT  |
-| Hash: e2f3g4...     |                           | Hash: 9d8c7b...     |
-| Content: &quot;hello&quot;    |                           | (src/ folder)       |
-+---------------------+                           +----------+----------+
-                                                             |
-                                                             v
-                                                  +---------------------+
-                                                  |     BLOB OBJECT     |
-                                                  | Hash: 1a2b3c...     |
-                                                  | Content: app code   |
-                                                  +---------------------+
-</code></pre>
-<h3 id="the-4-git-object-types">The 4 Git Object Types:</h3>
-<h4 id="1-blob-binary-large-object">1. Blob (Binary Large Object)</h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>+------------------------------------------------------------------------+
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>|                              COMMIT OBJECT                             |
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>|  Hash: a1b2c3d...                                                      |
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>|  Tree: 8f9e10... (Points to Root Tree)                                 |
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>|  Parent: 4a5b6c... (Previous Commit)                                   |
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>|  Author: Jane Doe &lt;jane@example.com&gt;                                   |
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>|  Message: Initial Commit                                               |
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>+-----------------------------------+-+----------------------------------+
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>                                    |
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>                                    v
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>                       +-------------------------+
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>                       |       ROOT TREE         |
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>                       | Hash: 8f9e10...         |
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>                       +------------+------------+
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>                                    |
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>           +------------------------+------------------------+
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>           |                                                 |
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>           v                                                 v
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>+---------------------+                           +---------------------+
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>|     BLOB OBJECT     |                           |    SUB-TREE OBJECT  |
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>| Hash: e2f3g4...     |                           | Hash: 9d8c7b...     |
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>| Content: "hello"    |                           | (src/ folder)       |
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>+---------------------+                           +----------+----------+
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>                                                             |
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>                                                             v
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>                                                  +---------------------+
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>                                                  |     BLOB OBJECT     |
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>                                                  | Hash: 1a2b3c...     |
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>                                                  | Content: app code   |
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>                                                  +---------------------+
+</span></code></pre></div>
+<h3 id="the-4-git-object-types">The 4 Git Object Types:<a class="headerlink" href="#the-4-git-object-types" title="Permanent link">&para;</a></h3>
+<h4 id="1-blob-binary-large-object">1. Blob (Binary Large Object)<a class="headerlink" href="#1-blob-binary-large-object" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Stores <strong>only the raw file contents</strong>.</li>
 <li>Does <strong>NOT</strong> store file names, timestamps, or execution permissions.</li>
 <li>If two files in different directories have identical contents, Git stores only <strong>one Blob</strong>.</li>
 </ul>
-<h4 id="2-tree">2. Tree</h4>
+<h4 id="2-tree">2. Tree<a class="headerlink" href="#2-tree" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Represents a <strong>directory structure</strong>.</li>
 <li>Contains pointers to <strong>Blobs</strong> (files) and other <strong>Trees</strong> (subdirectories).</li>
 <li>Stores filename, file mode/permissions (e.g., <code>100644</code> for normal file, <code>100755</code> for executable), and the object's SHA-1 hash.</li>
 </ul>
-<h4 id="3-commit">3. Commit</h4>
+<h4 id="3-commit">3. Commit<a class="headerlink" href="#3-commit" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Represents a snapshot in time.</li>
 <li>Contains:</li>
@@ -3870,44 +4161,44 @@
 <li>Author and Committer metadata (Name, Email, Timestamp).</li>
 <li>Commit message.</li>
 </ul>
-<h4 id="4-annotated-tag">4. Annotated Tag</h4>
+<h4 id="4-annotated-tag">4. Annotated Tag<a class="headerlink" href="#4-annotated-tag" title="Permanent link">&para;</a></h4>
 <ul>
 <li>A permanent reference pointing to a specific commit.</li>
 <li>Contains tagger name, date, tag message, and GPG signature if signed.</li>
 </ul>
 <hr />
-<h2 id="3-inside-the-git-directory">3. Inside the <code>.git</code> Directory</h2>
+<h2 id="3-inside-the-git-directory">3. Inside the <code>.git</code> Directory<a class="headerlink" href="#3-inside-the-git-directory" title="Permanent link">&para;</a></h2>
 <p>When you run <code>git init</code>, Git creates a hidden <code>.git</code> folder containing:</p>
-<pre><code>.git/
-├── HEAD            # Pointer to currently checked-out branch (e.g., ref: refs/heads/main)
-├── config          # Project-specific configuration settings
-├── description     # Used by GitWeb (rarely used today)
-├── hooks/          # Client-side and server-side executable scripts (pre-commit, post-merge, etc.)
-├── info/
-│   └── exclude     # Local ignore patterns (not shared via remote)
-├── objects/        # Database storing all Blobs, Trees, Commits, and Tags
-│   ├── info/
-│   └── pack/       # Compressed packfiles and index files
-└── refs/           # Pointers to commits (branches, tags, remotes)
-    ├── heads/      # Local branches (e.g., main, feature-1)
-    ├── tags/       # Local tags (e.g., v1.0.0)
-    └── remotes/    # Tracking branches for remote repositories
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>.git/
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├── HEAD            # Pointer to currently checked-out branch (e.g., ref: refs/heads/main)
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>├── config          # Project-specific configuration settings
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>├── description     # Used by GitWeb (rarely used today)
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>├── hooks/          # Client-side and server-side executable scripts (pre-commit, post-merge, etc.)
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>├── info/
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>│   └── exclude     # Local ignore patterns (not shared via remote)
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>├── objects/        # Database storing all Blobs, Trees, Commits, and Tags
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>│   ├── info/
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>│   └── pack/       # Compressed packfiles and index files
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>└── refs/           # Pointers to commits (branches, tags, remotes)
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    ├── heads/      # Local branches (e.g., main, feature-1)
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    ├── tags/       # Local tags (e.g., v1.0.0)
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    └── remotes/    # Tracking branches for remote repositories
+</span></code></pre></div>
 <hr />
-<h2 id="4-how-branches-and-head-work">4. How Branches and HEAD Work</h2>
+<h2 id="4-how-branches-and-head-work">4. How Branches and HEAD Work<a class="headerlink" href="#4-how-branches-and-head-work" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Branch</strong>: A simple text file in <code>.git/refs/heads/&lt;branch_name&gt;</code> containing a single 40-character commit hash. Creating a branch takes <strong>1 millisecond</strong> and <strong>zero extra storage</strong> because it's just writing a 41-byte text file.</li>
 <li><strong>HEAD</strong>: A simple text file (<code>.git/HEAD</code>) containing a reference to the active branch pointer (e.g., <code>ref: refs/heads/main</code>).</li>
 <li><strong>Detached HEAD State</strong>: Occurs when <code>HEAD</code> points directly to a specific commit hash rather than a named branch pointer.</li>
 </ul>
-<pre><code>Normal HEAD state:
-  HEAD ----&gt; refs/heads/main ----&gt; Commit [c3d4e5]
-
-Detached HEAD state:
-  HEAD --------------------------&gt; Commit [c3d4e5]
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Normal HEAD state:
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  HEAD ----&gt; refs/heads/main ----&gt; Commit [c3d4e5]
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Detached HEAD state:
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  HEAD --------------------------&gt; Commit [c3d4e5]
+</span></code></pre></div>
 <hr />
-<h2 id="5-packfiles-garbage-collection-git-gc">5. Packfiles &amp; Garbage Collection (<code>git gc</code>)</h2>
+<h2 id="5-packfiles-garbage-collection-git-gc">5. Packfiles &amp; Garbage Collection (<code>git gc</code>)<a class="headerlink" href="#5-packfiles-garbage-collection-git-gc" title="Permanent link">&para;</a></h2>
 <p>Initially, Git stores objects in <strong>loose format</strong> (one file per object). As the repository grows, Git performs <strong>Garbage Collection</strong>:
 1. Compresses loose objects into a single binary <strong>Packfile</strong> (<code>.pack</code>).
 2. Generates an Index file (<code>.idx</code>) for rapid object retrieval.
@@ -3944,27 +4235,43 @@ Detached HEAD state:
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright" style="text-align: center; width: 100%; font-family: sans-serif; font-size: 0.65rem; letter-spacing: 0.5px;">
-  <!-- Muted Silver/Gray for copyright -->
-  <span style="color: #94a3b8;">&copy; 2026</span> 
+      <div class="dvx-footer-copyright">
+  <span>&copy; 2026</span>
+  <a href="https://www.devopsvaultx.com/" target="_blank" rel="noopener noreferrer" class="dvx-footer-brand">
+    DevOpsVaultX
+  </a>
+  <span class="dvx-footer-sep">|</span>
+  <span class="dvx-footer-tagline">Code. Deploy. Automate. Repeat.</span>
+  <span class="dvx-footer-heart" aria-hidden="true">❤️</span>
+</div>
+      
+        
+<div class="md-social">
   
-  <!-- Crisp White for Brand Name -->
-  <strong style="color: #ffffff; margin-left: 4px;">DevOpsVaultX</strong> 
+    
+    
+    
+    
+    <a href="https://www.devopsvaultx.com/" target="_blank" rel="noopener" title="DevOpsVaultX Main Site" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
   
-  <!-- Muted Divider -->
-  <span style="color: #475569; margin: 0 8px;">|</span> 
+    
+    
+    
+    
+    <a href="https://github.com/sachinthokal/docs-for-devops" target="_blank" rel="noopener" title="GitHub Repository" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
   
-  <!-- 🌈 Premium Smooth Gradient for Tagline -->
-  <span style="
-    background: linear-gradient(90deg, #2dd4bf 0%, #a78bfa 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 600;
-    display: inline-block;
-  ">Code. Deploy. Automate. Repeat.</span>
+    
+    
+    
+    
+    <a href="https://www.youtube.com/@devopsvaultx" target="_blank" rel="noopener" title="YouTube Channel" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.2-23.7-24.8-42.3-48.3-48.6C458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5c-23.5 6.3-42 24.9-48.3 48.6C15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.3 448 288.1 448 288.1 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6V175.2l142.7 81.2z"/></svg>
+    </a>
   
-  <!-- Pulsing Red Heart -->
-  <span style="color: #f43f5e; margin-left: 2px;">❤️</span>
 </div>
       
     </div>
@@ -3980,10 +4287,10 @@ Detached HEAD state:
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.top", "navigation.instant", "navigation.tracking", "search.suggest", "search.highlight", "search.share", "toc.follow", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
     
   </body>

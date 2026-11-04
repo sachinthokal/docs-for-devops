@@ -2,362 +2,362 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.devopsvaultx.com/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/ansible/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/ansible/architecture/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/ansible/commands/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/ansible/installation/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/aws/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/aws/architecture/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/aws/commands/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/aws/installation/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/azure/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/azure/architecture/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/azure/commands/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/azure/installation/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/azure_devops/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/azure_devops/architecture/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/azure_devops/commands/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/azure_devops/installation/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/cicd/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/cicd/architecture/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/cicd/commands/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/cicd/installation/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/devsecops/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/devsecops/architecture/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/devsecops/commands/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/devsecops/installation/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/docker/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/docker/architecture/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/docker/commands/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/docker/installation/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/git/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/git/architecture/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/git/commands/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/git/installation/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/github/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/github/architecture/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/github/commands/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/github/installation/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/github_actions/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/github_actions/architecture/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/github_actions/commands/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/github_actions/installation/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/gitops/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/gitops/architecture/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/gitops/commands/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/gitops/installation/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/helm/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/helm/architecture/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/helm/commands/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/helm/installation/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/interview_questions/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/interview_questions/ansible/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/interview_questions/aws/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/interview_questions/azure/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/interview_questions/azure_devops/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/interview_questions/cicd/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/interview_questions/devsecops/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/interview_questions/docker/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/interview_questions/git/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/interview_questions/github/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/interview_questions/github_actions/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/interview_questions/kubernetes/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/interview_questions/linux/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/interview_questions/observability/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/interview_questions/terraform/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/kubernetes/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/kubernetes/architecture/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/kubernetes/autoscaling/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/kubernetes/cni-mesh/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/kubernetes/commands/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/kubernetes/config-secrets/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/kubernetes/kind/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/kubernetes/minikube/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/kubernetes/pod-security/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/kubernetes/probes/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/kubernetes/rbac/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/kubernetes/services-ingress/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/kubernetes/storage/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/kubernetes/workloads/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/linux/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/linux/architecture/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/linux/commands/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/linux/installation/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/observability/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/observability/architecture/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/observability/commands/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/observability/installation/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/terraform/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/terraform/architecture/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/terraform/commands/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
     <url>
          <loc>https://docs.devopsvaultx.com/terraform/installation/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-11-04</lastmod>
     </url>
 </urlset>
